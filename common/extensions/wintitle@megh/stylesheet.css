@@ -1,0 +1,12 @@
+
+.title-label {
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgba(10,10,10,0.7);
+    border-radius: 5px;
+    padding: .5em;
+}
+
+.panl-button {padding-left: 1em;
+padding-right: .5em;}

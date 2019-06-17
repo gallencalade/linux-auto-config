@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=IDA
+Comment=IDA
+GenericName=IDA
+X-GNOME-FullName=IDA
+Exec=/opt/idafree-7.0
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/idafree-7.0/appico64.png
+Categories=Disassembler
+StartupWMClass=IDA
+StartupNotify=true

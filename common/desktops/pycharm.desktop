@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Pycharm
+Comment=Python Editor
+GenericName=Pycharm
+X-GNOME-FullName=Pycharm Editor
+Exec=/opt/pycharm/bin/pycharm.sh
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/pycharm/bin/pycharm.png
+Categories=IDE;Editor;Python
+MimeType=py
+StartupWMClass=Pycharm
+StartupNotify=true

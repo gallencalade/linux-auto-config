@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Qt Creator
+Comment=IDE
+GenericName=Qt Creator
+X-GNOME-FullName=Qt Creator
+Exec=/opt/Qt/Tools/QtCreator/bin/qtcreator
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/Qt/QtIcon.png
+Categories=Programming;
+MimeType=qml
+StartupWMClass=Qt Creator
+StartupNotify=true
