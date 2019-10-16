@@ -43,13 +43,13 @@ echo "Tagging ${USR_LOCAL_INCLUDE} ==> ${USR_LOCAL_INCLUDE_TAGS}"
 func_chk_rm ${USR_LOCAL_INCLUDE_TAGS}
 func_ctags ${USR_LOCAL_INCLUDE_TAGS} ${USR_LOCAL_INCLUDE}
 
-# ============================== LIBRARY PATH ================================ #
-# STL
-STL="${HOME}/Documents/projects/open_sources/STLport-5.2.1"
-STL_TAGS="${TAGS_PATH}/stl.tags"
-echo "Tagging ${STL} ==> ${STL_TAGS}"
-func_chk_rm ${STL_TAGS}
-func_ctags ${STL_TAGS} ${STL}
+# =============================== CUDA PATH ================================= #
+# /usr/local/cuda/include
+USR_LOCAL_CUDA_INCLUDE="/usr/local/cuda/include"
+USR_LOCAL_CUDA_INCLUDE_TAGS="${TAGS_PATH}/usr_local_cuda_include.ctags"
+echo "Tagging ${USR_LOCAL_CUDA_INCLUDE} ==> ${USR_LOCAL_CUDA_INCLUDE_TAGS}"
+func_chk_rm ${USR_LOCAL_CUDA_INCLUDE_TAGS}
+func_ctags ${USR_LOCAL_CUDA_INCLUDE_TAGS} ${USR_LOCAL_CUDA_INCLUDE}
 
 # ============================== PRINT ======================================= #
 echo "Details of $HOME/.vim/*"
