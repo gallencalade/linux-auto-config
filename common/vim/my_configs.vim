@@ -55,6 +55,7 @@ set cursorcolumn
 
 set colorcolumn=80
 
+
 map <F4> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :TlistUpdate<CR>
 imap <F4> <ESC>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :TlistUpdate<CR>
 
@@ -73,6 +74,7 @@ map <F2> <C-X><C-I>
 set completeopt=menu,menuone,longest
 let OmniCpp_MayCompleteDot=1
 let OmniCpp_MayCompleteArrow=1
+let OmniCpp_MayCompleteScope=1
 let OmniCpp_SelectFirstItem=2
 let OmniCpp_NamespaceSearch=2
 let OmniCpp_ShowPrototypeInAddr=1
@@ -80,6 +82,7 @@ let OmniCpp_GlobalScopeSearch=1
 let OmniCpp_DisplayMode=1
 let OmniCpp_ShowScropeInAddr=1
 let OmniCpp_ShowAccess=1
+let OmniCpp_DefaultNamespaces=["std","_GLIBCXX_STD"]
 
 let Tlist_Ctags_Cmd='ctags'
 let Tlist_Use_Right_Window=1
@@ -89,7 +92,7 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_Process_File_Always=1
 let Tlist_Inc_Winwidth=0
 
-let g:winManagerWindowLayout='FileExplorer|TagList'
+let g:winManagerWindowLayout='TagList|FileExplorer'
 let g:persistentBehaviour=0
 
 map <F12> :WMToggle<CR>
@@ -102,12 +105,10 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
-        \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-      \ 'file': '\v\.(exe|so|dll)$',
-      \ 'link': 'some_bad_symbolic_links',
-      \ 
-}
-
+\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+\ 'file': '\v\.(exe|so|dll)$',
+\ 'link': 'some_bad_symbolic_links',
+\ }
 
 let g:miniBufExplMapWindowNavVim=1
 let g:miniBufExplMapWindowNavArrow=1
@@ -125,31 +126,24 @@ map <F8> :make clean<CR><CR><CR>
 imap <F8> <ESC>:make clean<CR><CR><CR>
 
 
-if has("cscope")
-    set csprg=/usr/bin/cscope
-    set csto=0
-    set cst
-    set cscopequickfix=s-,c-,d-,i-,t-,e-
-    set nocsverb
-    if filereadable("cscope.out")
-        cs add cscope.out
-    elseif $CSCOPE_DB != ""
-        cs add $CSCOPE_DB
-    endif
-    set csverb
-endif
+set csprg=/usr/bin/cscope
+set csto=0
+set cst
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+set nocsverb
+cs add cscope.out
+cs add ~/.vim/cscope/usr_include/usr_include.cs
+cs add ~/.vim/cscope/usr_include/usr_local_include.cs
+set csverb
 
-map <F9> :cs add ./cscope.out .<CR><CR><CR> :cs reset<CR>
-imap <F9> <ESC>:cs add ./cscope.out .<CR><CR><CR> :cs reset<CR>
-
-nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
-nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
-nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
-nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
-nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
-nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-_>i :cs find i <C-R>=expand("<cfile>")<CR><CR> :copen<CR><CR>
+nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
+nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
+nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
+nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR> :copen<CR><CR>
+nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR> :copen<CR><CR>
 
 
 :inoremap ( ()<ESC>i
@@ -168,10 +162,12 @@ let g:UltiSnipsEditSplit="vertical"
 
 let g:rainbow_active=1
 
+set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
+nmap <leader>sl :SessionList<CR>
+nmap <leader>ss :SessionSave<CR>
+nmap <leader>sc :SessionClose<CR>
 
-let g:NERDSpaceDelims=1
-let g:NERDCompactSexyComs=1
-let g:NERDDefaultAlign='left'
+let g:NERDDefaultAlign='right'
 let g:NERDAltDelims_cpp=1
 let g:NERDCustomDelimiters={ 'c': { 'left': '/**','right': '*/' } }
 let g:NERDCommentEmptyLines=1
@@ -181,10 +177,9 @@ let g:NERDTrimTrailingWhitespace=1
 let g:Powerline_symbols='fancy'
 
 
-:inoremap /** /**<CR> <CR><BS><BS>*/<ESC>k<END>i<DEL>
-" :inoremap /*<CR> /**<CR> <CR><BS><BS>*/<ESC>k<END>i
-:inoremap /*<SPACE> /*  */<ESC>2hi
-
+:inoremap //f /// \fn     <CR>/ \brief  <CR>/ \param  <CR>/ \return <ESC>3ka
+:inoremap //c /**<CR>\class <CR>\brief <CR><BS><BS>*/<ESC>2k<END>a
+:inoremap //l ///<<SPACE>
 
 set tags+=~/.vim/tags/stl.tags
 set tags+=~/.vim/tags/usr_include.tags

@@ -38,7 +38,7 @@ func_ctags ${USR_INCLUDE_TAGS} ${USR_INCLUDE}
 
 # /usr/local/include
 USR_LOCAL_INCLUDE="/usr/local/include"
-USR_LOCAL_INCLUDE_TAGS="${TAGS_PATH}/usr_local_include.ctags"
+USR_LOCAL_INCLUDE_TAGS="${TAGS_PATH}/usr_local_include.tags"
 echo "Tagging ${USR_LOCAL_INCLUDE} ==> ${USR_LOCAL_INCLUDE_TAGS}"
 func_chk_rm ${USR_LOCAL_INCLUDE_TAGS}
 func_ctags ${USR_LOCAL_INCLUDE_TAGS} ${USR_LOCAL_INCLUDE}
@@ -46,7 +46,7 @@ func_ctags ${USR_LOCAL_INCLUDE_TAGS} ${USR_LOCAL_INCLUDE}
 # =============================== CUDA PATH ================================= #
 # /usr/local/cuda/include
 USR_LOCAL_CUDA_INCLUDE="/usr/local/cuda/include"
-USR_LOCAL_CUDA_INCLUDE_TAGS="${TAGS_PATH}/usr_local_cuda_include.ctags"
+USR_LOCAL_CUDA_INCLUDE_TAGS="${TAGS_PATH}/usr_local_cuda_include.tags"
 echo "Tagging ${USR_LOCAL_CUDA_INCLUDE} ==> ${USR_LOCAL_CUDA_INCLUDE_TAGS}"
 func_chk_rm ${USR_LOCAL_CUDA_INCLUDE_TAGS}
 func_ctags ${USR_LOCAL_CUDA_INCLUDE_TAGS} ${USR_LOCAL_CUDA_INCLUDE}
