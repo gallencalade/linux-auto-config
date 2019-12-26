@@ -1,24 +1,6 @@
 #!/bin/bash
 
-TAGS_PATH="${HOME}/.vim/tags"
-
-if [ ! -d ${TAGS_PATH} ]
-then
-    echo "Making ${TAGS_PATH}"
-    mkdir -p ${TAGS_PATH}
-else
-    echo "Folder exists: ${TAGS_PATH}"
-fi
-
-func_chk_rm() {
-    if [ -f ${1} ]
-    then
-        echo "    Removing old ${1}"
-        rm ${1}
-    fi
-}
-
-func_ctags() {
+cmd_ctags() {
     ctags -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__    \
         --file-scope=yes --languages=c,c++ --links=yes                      \
         --c-kinds=+c+e+f+g+m+n+s+t+u+v+p+x                                  \
@@ -27,30 +9,37 @@ func_ctags() {
         ${1} ${2}
 }
 
+source "../../funcs.sh"
 
-# =============================== LOCAL PATH ================================= #
-# /usr/include
-USR_INCLUDE="/usr/include"
-USR_INCLUDE_TAGS="${TAGS_PATH}/usr_include.tags"
-echo "Tagging ${USR_INCLUDE} ==> ${USR_INCLUDE_TAGS}"
-func_chk_rm ${USR_INCLUDE_TAGS}
-func_ctags ${USR_INCLUDE_TAGS} ${USR_INCLUDE}
+gen_ctags() {
+  echo "Tagging ${1} ==> ${2}"
+  func_chk_rm ${2}
+  cmd_ctags ${2} ${1}
+}
 
-# /usr/local/include
-USR_LOCAL_INCLUDE="/usr/local/include"
-USR_LOCAL_INCLUDE_TAGS="${TAGS_PATH}/usr_local_include.tags"
-echo "Tagging ${USR_LOCAL_INCLUDE} ==> ${USR_LOCAL_INCLUDE_TAGS}"
-func_chk_rm ${USR_LOCAL_INCLUDE_TAGS}
-func_ctags ${USR_LOCAL_INCLUDE_TAGS} ${USR_LOCAL_INCLUDE}
+TAGS_ROOT_PATH="${HOME}/.vim/tags"
+func_chk_mkdir ${TAGS_ROOT_PATH}
 
-# =============================== CUDA PATH ================================= #
-# /usr/local/cuda/include
-USR_LOCAL_CUDA_INCLUDE="/usr/local/cuda/include"
-USR_LOCAL_CUDA_INCLUDE_TAGS="${TAGS_PATH}/usr_local_cuda_include.tags"
-echo "Tagging ${USR_LOCAL_CUDA_INCLUDE} ==> ${USR_LOCAL_CUDA_INCLUDE_TAGS}"
-func_chk_rm ${USR_LOCAL_CUDA_INCLUDE_TAGS}
-func_ctags ${USR_LOCAL_CUDA_INCLUDE_TAGS} ${USR_LOCAL_CUDA_INCLUDE}
+gen_ctags "/usr/include" "${TAGS_ROOT_PATH}/usr_include.tags"
+gen_ctags "/usr/local/include" "${TAGS_ROOT_PATH}/usr_local_include.tags"
+
+if [ $(whoami) == gallencalade ]
+then
+    PRJS_ROOT_PATH="${HOME}/Documents/projects/"
+    PRJS_OPENSOURCES_PATH="${PRJS_ROOT_PATH}/open-sources"
+    TAGS_OS_PATH="${TAGS_ROOT_PATH}/os"
+    func_chk_mkdir "${TAGS_OS_PATH}"
+    gen_ctags "${PRJS_OPENSOURCES_PATH}/libevent/" "${TAGS_OS_PATH}/libevent.tags"
+    gen_ctags "${PRJS_OPENSOURCES_PATH}/spdlog/include" "${TAGS_OS_PATH}/spdlog.tags"
+    gen_ctags "${PRJS_OPENSOURCES_PATH}/openmp/runtime/src" "${TAGS_OS_PATH}/openmp.tags"
+    gen_ctags "${PRJS_OPENSOURCES_PATH}/rapidjson/include" "${TAGS_OS_PATH}/rapidjson.tags"
+    gen_ctags "${PRJS_OPENSOURCES_PATH}/protobuf/src/google" "${TAGS_OS_PATH}/protobuf.tags"
+    gen_ctags "${PRJS_OPENSOURCES_PATH}/googletest/googletest/include" "${TAGS_OS_PATH}/googletest.tags"
+    gen_ctags "${PRJS_OPENSOURCES_PATH}/googletest/googlemock/include" "${TAGS_OS_PATH}/googlemock.tags"
+    gen_ctags "${PRJS_OPENSOURCES_PATH}/boost_1_72_0/boost" "${TAGS_OS_PATH}/boost.tags"
+fi
 
 # ============================== PRINT ======================================= #
-echo "Details of $HOME/.vim/*"
-ls -hl ${TAGS_PATH}
+echo "Details of ${TAGS_ROOT_PATH}"
+ls -hl ${TAGS_ROOT_PATH}
+ls -hl ${TAGS_OS_PATH}

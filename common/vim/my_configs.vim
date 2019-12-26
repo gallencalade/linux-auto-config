@@ -92,7 +92,7 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_Process_File_Always=1
 let Tlist_Inc_Winwidth=0
 
-let g:winManagerWindowLayout='TagList|FileExplorer'
+let g:winManagerWindowLayout='FileExplorer|TagList'
 let g:persistentBehaviour=0
 
 map <F12> :WMToggle<CR>
@@ -181,10 +181,16 @@ let g:Powerline_symbols='fancy'
 :inoremap //c /**<CR>\class <CR>\brief <CR><BS><BS>*/<ESC>2k<END>a
 :inoremap //l ///<<SPACE>
 
-set tags+=~/.vim/tags/stl.tags
 set tags+=~/.vim/tags/usr_include.tags
 set tags+=~/.vim/tags/usr_local_include.tags
-
+set tags+=~/.vim/tags/os/googletest.tags
+set tags+=~/.vim/tags/os/googlemock.tags
+set tags+=~/.vim/tags/os/libevent.tags
+set tags+=~/.vim/tags/os/spdlog.tags
+set tags+=~/.vim/tags/os/rapidjson.tags
+set tags+=~/.vim/tags/os/protobuf.tags
+set tags+=~/.vim/tags/os/openmp.tags
+" set tags+=~/.vim/tags/os/boost.tags
 
 autocmd FileType vim setlocal dict+=~/.vim/dict/vim.dict
 autocmd FileType c setlocal dict+=~/.vim/dict/c.dict

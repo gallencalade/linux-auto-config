@@ -1,33 +1,41 @@
 #!/bin/bash
 
-# apt-get install softwares
-# ./apt_get_install.sh
+echo "Installing apps desktops icons..."
+APPS_DESKTOPS_PATH="/usr/local/share/applications/"
+sudo cp desktops/*.desktop ${APPS_DESKTOPS_PATH}
 
-# cp desktops
-cp desktops/*.desktop /usr/local/share/applications/
+source "${PWD}/../funcs.sh"
 
-# linux icons
-mkdir -p ${HOME}/.local/share/icons
-tar xvJf icons/Aqua-Dark.tar.xz ${HOME}/.local/share/icons
+echo "Installing linux icons..."
+LINUX_ICONS_PATH="${HOME}/.local/share/icons"
+func_chk_mkdir ${LINUX_ICONS_PATH}
+tar xvJf icons/Aqua-Dark.tar.xz ${LINUX_ICONS_PATH}
 
-# linux themes
-mkdir -p ${HOME}/.themes
-tar xvJf themes/Ant-Dracula-slim.tar.xz -C ${HOME}/.themes/
-tar xvJf themes/Ant-Dracula-slim.tar.xz -C ${HOME}/.themes/
+echo "Installing linux themes..."
+LINUX_THEME_PATH="${HOME}/.themes"
+func_chk_mkdir ${LINUX_THEME_PATH}
+tar xvJf themes/Ant-Dracula-slim.tar.xz -C ${LINUX_THEME_PATH}
+tar xvJf themes/Ant-Dracula-slim.tar.xz -C ${LINUX_THEME_PATH}
 
-# yakuake skins
-mkdir -p /usr/share/yakuake/skins
-tar zxvf yakuake/materia-dark-yakuake.tar.gz -C /usr/share/yakuake/skins/
-tar zxvf yakuake/monochrome-kde-master.tar.gz -C /usr/share/yakuake/skins/
+echo "Installing linux extensions..."
+LINUX_EXTENSIONS_PATH=i"${HOME}/.local/share/gnome-shell/extensions"
+func_chk_mkdir ${LINUX_EXTENSIONS_PATH}
+cp extensions/* ${LINUX_EXTENSIONS_PATH}
 
-# thunderbird themes
+echo "Installing Yakuake skins..."
+YAKUAKE_THEME_PATH="/usr/share/yakuake/skins"
+sudo func_chk_mkdir ${YAKUAKE_THEME_PATH}
+sudo tar zxvf yakuake/materia-dark-yakuake.tar.gz -C ${YAKUAKE_THEME_PATH}
+sudo tar zxvf yakuake/monochrome-kde-master.tar.gz -C ${YAKUAKE_THEME_PATH}
 
+echo "Installing shell..."
+install_shell.sh
 
-# git config
-git config --global user.name "Gallen Calade"
-git config --global user.email "gallencalade@qq.com"
-git config --global core.editor vim
-git config alias.br branch
-git config alias.ck checkout
-git config alias.cm commit
-git config alias.lg "log --oneline --graph"
+echo "Installing vim..."
+vim/install.sh
+
+if [ $(whoami) == gallencalade ]
+then
+    echo "Instaling for gallen..."
+    gallen/install.sh
+fi
