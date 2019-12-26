@@ -1,11 +1,4 @@
 *.cache
 *.tags
-*.tag
-*.ctags
-*.ctag
-*.cs
 *.scope
-*.scopes
-*.cscopes
-*.cscope
-
+*.scope*
