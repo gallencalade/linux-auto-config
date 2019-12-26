@@ -132,8 +132,20 @@ set cst
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 set nocsverb
 cs add cscope.out
-cs add ~/.vim/cscope/usr_include/usr_include.cs
-cs add ~/.vim/cscope/usr_include/usr_local_include.cs
+cs add ~/.vim/scopes/usr_include.scope
+cs add ~/.vim/scopes/usr_local_include.scope
+cs add ~/.vim/scopes/os/boost.scope
+cs add ~/.vim/scopes/os/cryptopp.scope
+cs add ~/.vim/scopes/os/flatbuffers.scope
+cs add ~/.vim/scopes/os/googletest.scope
+cs add ~/.vim/scopes/os/grpc.scope
+cs add ~/.vim/scopes/os/libevent.scope
+cs add ~/.vim/scopes/os/linux.scope
+cs add ~/.vim/scopes/os/openmp.scope
+cs add ~/.vim/scopes/os/openssl.scope
+cs add ~/.vim/scopes/os/protobuf.scope
+cs add ~/.vim/scopes/os/rapidjson.scope
+cs add ~/.vim/scopes/os/spdlog.scope
 set csverb
 
 nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
