@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ../funcs.sh
-func_chk_func gitcloned
+func_chk_mkdir gitcloned
 
 PWD_SAVE=${HOME}
 
@@ -21,14 +21,13 @@ cd ${PWD_SAVE}
 
 echo "Installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-ch -s zsh
+chsh -s /usr/bin/zsh
 
 echo "Installing autojump..."
 cd gitcloned
 git clone git://github.com/wting/autojump.git
 cd autojump && ./install.py
-echo "[[ -s ${HOME}/.autojump/etc/profile.d/autojump.sh ]] && source
-${HOME}/.autojump/etc/profile.d/autojump.sh" >> ${HOME}/.zshrc
+echo "[[ -s ${HOME}/.autojump/etc/profile.d/autojump.sh ]] && source ${HOME}/.autojump/etc/profile.d/autojump.sh" >> ${HOME}/.zshrc
 cd ${PWD_SAVE}
 
 echo "Installing trash-cli..."
