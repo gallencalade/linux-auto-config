@@ -22,3 +22,4 @@ git config alias.cm commit
 git config alias.lg "log --oneline --graph"
 git config alias.mgs "merge --squash"
 git config alias.st status
+git config alias.cr "clone --recursive"

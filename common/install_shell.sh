@@ -15,8 +15,8 @@ cd ${PWD_SAVE}
 echo "Installing tmux..."
 cd ${HOME}
 git clone https://github.com/gpakosz/.tmux.git
-ln -s -f .tmux/.tmux.conf
-cp .tmux/.tmux.conf.local .
+ln -s -f ${HOME}/.tmux/.tmux.conf
+cp ${HOME}/.tmux/.tmux.conf.local .
 cd ${PWD_SAVE}
 
 echo "Installing oh-my-zsh..."
