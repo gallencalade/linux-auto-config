@@ -16,10 +16,10 @@ echo "Configing git..."
 git config --global user.name "Gallen Calade"
 git config --global user.email "gallencalade@qq.com"
 git config --global core.editor vim
-git config alias.br branch
-git config alias.ck checkout
-git config alias.cm commit
-git config alias.lg "log --oneline --graph"
-git config alias.mgs "merge --squash"
-git config alias.st status
-git config alias.cr "clone --recursive"
+git config --global alias.br branch
+git config --global alias.ck checkout
+git config --global alias.cm commit
+git config --global alias.lg "log --oneline --graph"
+git config --global alias.mgs "merge --squash"
+git config --global alias.st status
+git config --global alias.cr "clone --recursive"
