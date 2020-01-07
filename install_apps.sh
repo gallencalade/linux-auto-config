@@ -38,22 +38,24 @@ sudo apt-get -y install dos2unix
 sudo apt-get -y install aclocal
 sudo apt-get -y install autoreconf
 sudo apt-get -y install cmake
+sudo apt-get -y install focuswriter
 sudo apt-get -y install trash-cli
 sudo apt-get -y install git
 sudo apt-get -y install libtool
-sudo apt-get -y install vim 
+sudo apt-get -y install vim
 sudo apt-get -y install kate
 sudo apt-get -y install cscope
 sudo apt-get -y install vim-doc
 sudo apt-get -y install vim-scripts
 sudo apt-get -y install vim-addon-manager
 sudo apt-get -y install exuberant-ctags
-sudo apt-get -y install gnome-shell-extension-draw-on-your-screen 
+sudo apt-get -y install gnome-shell-extension-draw-on-your-screen
 sudo apt-get -y install curl
 sudo apt-get -y install gnome-shell-extension-system-monitor
 sudo apt-get -y install python3-pip
 sudo apt-get -y install gnome-shell-extension-top-icons-plus
 sudo apt-get -y install wireshark
 sudo apt-get -y install gnome-shell-extension-desktop-icons
+sudo apt-get -y install gnome-shell-extension-weather
 
 sudo pip3 install keystone-engine unicorn capstone ropper

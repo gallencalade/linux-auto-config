@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Jekyll Writer
+Comment=Writer
+GenericName=Jekyll Writer
+X-GNOME-FullName=Jekyll Writer
+Exec=/opt/Jekyll_Writer/Jekyll\ Writer
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/Jekyll_Writer/resources/app/images/logo512.ico
+Categories=Writer
+StartupWMClass=Jekyll Writer
+StartupNotify=true
