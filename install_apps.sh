@@ -8,7 +8,6 @@ sudo apt-get -y install gcc
 sudo apt-get -y install gdb
 sudo apt-get -y install zsh
 sudo apt-get -y install tmux
-sudo apt-get -y install go
 sudo apt-get -y install golang
 sudo apt-get -y install llvm
 sudo apt-get -y install lldb
@@ -24,7 +23,7 @@ sudo apt-get -y install speedcrunch
 sudo apt-get -y install python3
 sudo apt-get -y install unzip
 sudo apt-get -y install unrar
-sudo apt-get -y install tweak
+sudo apt-get -y install gnome-tweak
 sudo apt-get -y install shutter
 sudo apt-get -y install vlc
 sudo apt-get -y install net-tools

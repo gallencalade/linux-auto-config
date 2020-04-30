@@ -1,4 +1,4 @@
-#!/bin/bash
+#bin/bash
 
 echo "Installing apps desktops icons..."
 APPS_DESKTOPS_PATH="/usr/share/applications/"
@@ -17,11 +17,6 @@ func_chk_mkdir ${LINUX_THEME_PATH}
 tar xvJf themes/Ant-Dracula-slim.tar.xz -C ${LINUX_THEME_PATH} >> /dev/null
 tar xvJf themes/Sweet-Dark.tar.xz -C ${LINUX_THEME_PATH} >> /dev/null
 
-#echo "Installing linux extensions..."
-#LINUX_EXTENSIONS_PATH="${HOME}/.local/share/gnome-shell/extensions"
-#func_chk_mkdir ${LINUX_EXTENSIONS_PATH}
-#cp extensions/* ${LINUX_EXTENSIONS_PATH}
-
 #echo "Installing Yakuake skins..."
 #YAKUAKE_THEME_PATH="/usr/share/yakuake/skins"
 #sudo func_chk_mkdir ${YAKUAKE_THEME_PATH}
@@ -29,13 +24,13 @@ tar xvJf themes/Sweet-Dark.tar.xz -C ${LINUX_THEME_PATH} >> /dev/null
 #sudo tar zxvf yakuake/monochrome-kde-master.tar.gz -C ${YAKUAKE_THEME_PATH}
 
 #echo "Installing shell..."
-./install_shell.sh
+#./install_shell.sh
 
 #echo "Installing vim..."
-cd vim && ./install.sh
+#cd vim && ./install.sh
 
-if [ $(whoami) == gallencalade ] || [ $(whoami) == gallen ]
-then
-    echo "Instaling for gallen..."
-    cd gallen && ./install.sh
-fi
+#if [ $(whoami) == gallencalade ] || [ $(whoami) == gallen ]
+#then
+#    echo "Instaling for gallen..."
+#    cd gallen && ./install.sh
+#fi
