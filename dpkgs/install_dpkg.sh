@@ -5,7 +5,7 @@ sudo add-apt-repository ppa:bashtop-monitor/bashtop
 sudo apt-get update && apt-get dist-upgrade
 
 sudo apt-get -y install build-essential gcc g++ gdb clang llvm lldb golang
-sudo apt-get -y install zsh tmux trash-cli autojump lolcat
+sudo apt-get -y install zsh tmux trash-cli autojump lolcat nasm
 sudo apt-get -y install m4 autoconf cmake libtool gfortran fcitx
 sudo apt-get -y install calibre okular neofetch focuswriter
 sudo apt-get -y install vim vim-doc vim-scripts vim-addon-manager kate
