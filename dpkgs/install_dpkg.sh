@@ -6,9 +6,9 @@ sudo apt-get update && apt-get dist-upgrade
 
 sudo apt-get -y install build-essential gcc g++ gdb clang llvm lldb golang
 sudo apt-get -y install zsh tmux trash-cli autojump lolcat
-sudo apt-get -y install m4 autoconf cmake libtool gfortran
-sudo apt-get -y install calibre okular neofetch
-sudo apt-get -y install vim vim-doc vim-scripts vim-addon-manager kate focuswriter
+sudo apt-get -y install m4 autoconf cmake libtool gfortran fcitx
+sudo apt-get -y install calibre okular neofetch focuswriter
+sudo apt-get -y install vim vim-doc vim-scripts vim-addon-manager kate
 sudo apt-get -y install exuberant-ctags cscope git
 sudo apt-get -y install bless wireshark curl vlc speedcrunch unzip unrar
 sudo apt-get -y install htop tree net-tools ifstat dos2unix xclip bashtop
