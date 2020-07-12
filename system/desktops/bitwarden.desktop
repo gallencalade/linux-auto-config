@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Bitwarden
+Comment=Security
+GenericName=Bitwarden
+X-GNOME-FullName=Bitwarden
+Exec=/opt/Bitwarden/Bitwarden-1.19.0-x86_64.AppImage
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/Bitwarden/bitwarden.png
+Categories=Security;Password Manager;
+StartupWMClass=Bitwarden
+StartupNotify=true
