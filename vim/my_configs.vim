@@ -2,6 +2,7 @@ syntax enable
 set encoding=UTF-8
 set background=dark
 colorscheme molokai
+let g:molokai_original=1
 
 if has("syntax")
   syntax on
@@ -60,17 +61,9 @@ set colorcolumn=80
 map <F4> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :TlistUpdate<CR>
 imap <F4> <ESC>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :TlistUpdate<CR>
 
+set tags=.tags
 set tags+=~/.vim/tags/usr_include.tags
 set tags+=~/.vim/tags/usr_local_include.tags
-set tags+=~/.vim/tags/usr_lib_llvm_include.tags
-set tags+=~/.vim/tags/os/googletest.tags
-set tags+=~/.vim/tags/os/googlemock.tags
-set tags+=~/.vim/tags/os/libevent.tags
-set tags+=~/.vim/tags/os/spdlog.tags
-set tags+=~/.vim/tags/os/rapidjson.tags
-set tags+=~/.vim/tags/os/protobuf.tags
-set tags+=~/.vim/tags/os/openmp.tags
-" set tags+=~/.vim/tags/os/boost.tags
 
 imap <F3> <C-X><C-O>
 map <F3> <C-X><C-O>
@@ -98,7 +91,7 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_Process_File_Always=1
 let Tlist_Inc_Winwidth=0
 
-let g:winManagerWindowLayout='NERDTree|TagList'
+let g:winManagerWindowLayout='FileExplorer|TagList'
 let g:persistentBehaviour=0
 
 map <F12> :WMToggle<CR>
@@ -140,18 +133,6 @@ set nocsverb
 cs add cscope.out
 cs add ~/.vim/scopes/usr_include.scope
 cs add ~/.vim/scopes/usr_local_include.scope
-cs add ~/.vim/scopes/os/boost.scope
-cs add ~/.vim/scopes/os/cryptopp.scope
-cs add ~/.vim/scopes/os/flatbuffers.scope
-cs add ~/.vim/scopes/os/googletest.scope
-cs add ~/.vim/scopes/os/grpc.scope
-cs add ~/.vim/scopes/os/libevent.scope
-cs add ~/.vim/scopes/os/linux.scope
-cs add ~/.vim/scopes/os/openmp.scope
-cs add ~/.vim/scopes/os/openssl.scope
-cs add ~/.vim/scopes/os/protobuf.scope
-cs add ~/.vim/scopes/os/rapidjson.scope
-cs add ~/.vim/scopes/os/spdlog.scope
 set csverb
 
 nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
