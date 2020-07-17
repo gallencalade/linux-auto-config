@@ -3,7 +3,7 @@
 source "${PWD}/../scripts/funcs.sh"
 
 cd autojump
-./install.py
+python3 install.py
 cd -
 
 ln -sfr tmux.conf.local ${HOME}/.tmux.conf.local
