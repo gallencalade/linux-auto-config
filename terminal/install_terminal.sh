@@ -2,7 +2,9 @@
 
 source "${PWD}/../scripts/funcs.sh"
 
-cd autojump && ./install.py && cd -
+cd autojump
+./install.py
+cd -
 
 ln -sfr tmux.conf.local ${HOME}/.tmux.conf.local
 ln -sfr zshrc ${HOME}/.zshrc

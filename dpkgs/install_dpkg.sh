@@ -19,7 +19,7 @@ sudo apt-get -y install gnome-shell-extension-weather
 sudo apt-get -y install gnome-shell-extension-workspaces-to-dock
 
 sudo pip3 install keystone-engine unicorn capstone ropper
-sudo pip3 install superpaper
+sudo pip3 install superpaper psutil
 
 sudo dpkg -i lsd_0.17.0_amd64.deb
 sudo dpkg -i bat_0.15.4_amd64.deb

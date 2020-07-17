@@ -1,4 +1,9 @@
 #!/bin/bash
 
-cp Hack/* ${HOME}/.local/share/fonts
-cp Hack-Nerd/* ${HOME}/.local/share/fonts
+source "${PWD}/../scripts/funcs.sh"
+
+FONTS_PATH=${HOME}/.local/share/fonts
+func_chk_mkdir ${FONTS_PATH}
+
+cp Hack/* ${FONTS_PATH}
+cp Hack-Nerd/* ${FONTS_PATH}

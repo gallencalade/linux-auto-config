@@ -8,4 +8,4 @@ git config --global alias.br branch
 git config --global alias.ck checkout
 git config --global alias.cm commit
 git config --global alias.st status
-git config --global alias.clone "clone --recursive"
+git config --global alias.cl "clone --recursive"
