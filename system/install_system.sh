@@ -11,6 +11,7 @@ LINUX_ICONS_PATH="${HOME}/.local/share/icons"
 func_chk_mkdir ${LINUX_ICONS_PATH}
 tar xvJf icons/Aqua-Dark.tar.xz -C ${LINUX_ICONS_PATH} >> /dev/null
 tar xvJf icons/candy-icons.tar.xz -C ${LINUX_ICONS_PATH} >> /dev/null
+tar xvJf icons/Sweet-Rainbow.tar.xz -C ${LINUX_ICONS_PATH} >> /dev/null
 
 echo "Installing linux themes..."
 LINUX_THEME_PATH="${HOME}/.themes"

@@ -198,23 +198,3 @@ autocmd FileType cc setlocal dict+=~/.vim/dict/cpp.dict
 
 :highlight extraSpace ctermbg=red guibg=red
 :match extraSpace /\v\s+$/
-
-let pathToClangFormatPy = "/media/gallencalade/Documents/projects/open_sources/llvm-project/clang/tools/clang-format.py"
-if has('python3')
-  map <C-K> :py3f pathToClangFormatPy<cr>
-  imap <C-K> <c-o>:py3f pathToClangFormatPy<cr>
-elseif has('python')
-  map <C-K> :pyf pathToClangFormatPy<cr>
-  imap <C-K> <c-o>:pyf pathToClangFormatPy<cr>
-endif
-
-function! Formatonsave()
-  let l:formatdiff = 1
-    if has('python3')
-      py3f pathToClangFormatPy
-    elseif has('python')
-      pyf pathToClangFormatPy
-    endif
-endfunction
-autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
-
