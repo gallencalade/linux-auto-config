@@ -4,6 +4,7 @@ break
 case
 char
 const
+constexpr
 continue
 default
 decltype
