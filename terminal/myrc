@@ -5,6 +5,12 @@ export CPLUS_INCLUDE_PATH=${CPLUS_INCLUDE_PATH}:${CUDA_HOME}/include
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CUDA_HOME}/lib64
 export LIBRARY_PATH=${LIBRARY_PATH}:${CUDA_HOME}/lib64
 
+export JAVA_HOME=/usr/lib/jvm/java-14-openjdk-amd64
+export C_INCLUDE_PATH=${C_INCLUDE_PATH}:${JAVA_HOME}/include:${JAVA_HOME}/include/linux
+export CPLUS_INCLUDE_PATH=${CPLUS_INCLUDE_PATH}:${JAVA_HOME}/include:${JAVA_HOME}/include/linux
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${JAVA_HOME}/lib
+export LIBRARY_PATH=${LIBRARY_PATH}:${JAVA_HOME}/lib
+
 # This is for man to colorize output
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'

@@ -148,6 +148,8 @@ less
 list
 logic_error
 lower_bound
+make_shared
+make_unique
 map
 max_bucket_count
 max_size
@@ -214,6 +216,7 @@ seekp
 set
 set
 setf
+shared_ptr
 size
 slist
 sort
@@ -223,6 +226,7 @@ stack
 static_cast
 stdexcept
 string
+stringstream
 substr
 swap
 sync_with_stdio
@@ -239,6 +243,7 @@ typeid
 typename
 underflow_error
 unique
+unique_ptr
 unsetf
 upper_bound
 using
@@ -246,6 +251,7 @@ utility
 value_comp
 vector
 virtual
+weak_ptr
 width
 write
 xor

@@ -61,7 +61,7 @@ set colorcolumn=80
 map <F4> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :TlistUpdate<CR>
 imap <F4> <ESC>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :TlistUpdate<CR>
 
-set tags=.tags
+set tags=.tags,tags
 set tags+=~/.vim/tags/usr_include.tags
 set tags+=~/.vim/tags/usr_local_include.tags
 
