@@ -31,6 +31,57 @@ dependency of configurations.
 
 ## Applications
 
+This folder contains useful softwares.
+
+### dpkgs/
+
+
+
+### themes/
+
+
+
+### apt_get.sh
+
+
+
+### docker.sh
+
+
+
+### dpkgs.sh
+
+
+
+### gnome_shell_extensions.sh
+
+
+
+### install.sh
+
+
+
+### pip.sh
+
+[keystone]: https://github.com/keystone-engine/keystone
+[unicorn]: https://github.com/unicorn-engine/unicorn
+[capstone]: https://github.com/aquynh/capstone
+[ropper]: https://github.com/sashs/Ropper
+
+### sources.list
+
+This is Tsinghua University source installed to `/etc/apt/source.list` .
+
+Or, you can select source from Software & Updates:
+
+![](assets/source_select.png)
+
+and check the software repo list:
+
+![](assets/software_source.png)
+
+### themes.sh
+
 
 
 ## Fonts
@@ -38,6 +89,8 @@ dependency of configurations.
 Hack is my favorite font for coding and its mono-spaced font with a high number of glyphs (icons) shows below:
 
 ![](assets/hack_nerd.png)
+
+Every file starts with an icon.
 
 ## System
 
