@@ -37,7 +37,7 @@ dependency of configurations.
 
 Hack is my favorite font for coding and its mono-spaced font with a high number of glyphs (icons) shows below:
 
-![](/home/gallen/Documents/projects/my-prjs/linux-auto-config/assets/hack_nerd.png)
+![](assets/hack_nerd.png)
 
 ## System
 
