@@ -63,10 +63,10 @@ This folder contains useful softwares.
 
 ### pip.sh
 
-[keystone]: https://github.com/keystone-engine/keystone
-[unicorn]: https://github.com/unicorn-engine/unicorn
-[capstone]: https://github.com/aquynh/capstone
-[ropper]: https://github.com/sashs/Ropper
+Softwares installed by pip.
+
+-   [keystone](https://github.com/keystone-engine/keystone), [unicorn](https://github.com/unicorn-engine/unicorn), [capstone](https://github.com/aquynh/capstone) and [ropper](https://github.com/sashs/Ropper) are installed for GDB because of missing warning showed at starting.
+-   [superpaper](https://github.com/hhannine/superpaper) is a wonderful wallpaper manager.
 
 ### sources.list
 
