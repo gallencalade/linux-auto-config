@@ -1,87 +1,55 @@
-# My Linux Personalized Configuration
+# My Personalized Linux Auto Configuration
 
-This is my own personized linux configuration, including beautifing linux and apps configurations, the directory structure is below.
+This repository is my personal customized Linux configuration, including beautifying Linux and useful apps installations with configurations which can be installed automatically.
 
-## commom
+# Notes
 
-Auto configuration by shell.
+If you have any interesting and useful softwares, please let me know, and I will place it in apps.
 
-### destops
+Configurations and installations is personalized by me, some options might be wrong and not are suitable for you. Please DO NOT contribute any PR to me, while you may fork this repository and customize your self themes, path, configures and other options in case of breaking your system environment. Reading all the blow is first step to defend and customize your own Linux.
 
-Some apps desktop icons.
+# Start to Install
 
-### extensions
+You can just start with:
 
-Some linux system extensions.
+```bash
+$ ./auto-install.sh
+```
 
-### gallen
+All is going automatically.
 
-My own congiuration files and sh.
+# Directory Structure
 
-### icons
+## auto-install.sh
 
-Linux system icons.
+This is entry of all and the installations order is intentional because of
+dependency of configurations.
 
-### install.sh
+## config.sh
 
-Main auto install.
 
-### install\_shell.sh
 
-Installation of  the shell options.
+## Applications
 
-### themes
 
-Linux system themes.
 
-### Vim
+## Fonts
 
-Vim configurations.
+Hack is my favorite font for coding and its mono-spaced font with a high number of glyphs (icons) shows below:
 
-#### cscope.sh
+![](/home/gallen/Documents/projects/my-prjs/linux-auto-config/assets/hack_nerd.png)
 
-Generated cscope files in `~/.vim/scopes/`
+## System
 
-#### ctags.sh
 
-Generated ctags files in `~/.vim/tags/`.
 
-#### install.sh
+## Terminal
 
-Installation of vim options.
 
-#### my\_configs.vim
 
-My own vimrc config file is used by `vimrc_runtime`.
+## Tools
 
-#### vim
 
-Saved vim plugins.
 
-### yakuake
+## Vim
 
-Yakuake themes.
-
-## funcs.sh
-
-Funtions used in sub shells.
-
-## install\_apps.sh
-
-Some necessary apps installation.
-
-## install.sh
-
-Main install.
-
-## manual
-
-Options by manual operation.
-
-## tools
-
-Some useful tools here.
-
-### colortest.perl
-
-Terminal color test.
