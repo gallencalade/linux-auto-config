@@ -33,3 +33,6 @@ ln -sfr myrc ${HOME}/.myrc
 
 echo "[4] Installing Gogh"
 # TODO(gallen)
+
+echo "[5] Configuring GEF for GDB"
+wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh

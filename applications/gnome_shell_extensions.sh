@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo " - Installing Gnome Tweaks"
+sudo apt-get -y install gnome-tweaks
+
 echo " - Installing Draw on Your Screen"
 sudo apt-get -y install gnome-shell-extension-draw-on-your-screen
 
