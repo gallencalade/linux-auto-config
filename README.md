@@ -8,11 +8,12 @@ If you have any interesting and useful softwares, please let me know, and I will
 
 Configurations and installations is personalized by me, some options might be wrong and not are suitable for you. You may fork this repository and customize your self themes, path, configures and other options in case of breaking your system environment. Reading all the blow is first step to defend and customize your own Linux.
 
-# Start to Install
+# Start to Install 
 
 You can just start with:
 
 ```bash
+$ git clone --submodule git@github.com:gallencalade/linux-auto-config.git
 $ ./auto-install.sh
 ```
 
@@ -35,6 +36,12 @@ This folder contains useful softwares installation.
 ### install.sh
 
 Install applications.
+
+1.  Installs applications and gnome extensions that can be installed by `apt-get`;
+2.  Installs docker;
+3.  Installs applications that can be installed by `pip`;
+4.  Installs themes;
+5.  Installs offline dpkgs.
 
 ### sources.list
 
@@ -225,6 +232,12 @@ Hack is my favorite font for coding and its mono-spaced font with a high number 
 
 Every file starts with an icon.
 
+### install.sh
+
+Fonts installation.
+
+1.  Installs fonts.
+
 ## System
 
 Configurations of Linux system.
@@ -232,6 +245,10 @@ Configurations of Linux system.
 ### install.sh
 
 Install the configurations in system.
+
+1.  Installs applications desktops;
+2.  Installs system icons and themes;
+3.  Installs shell extensions.
 
 ### desktops/
 
@@ -248,8 +265,6 @@ This folder contains the gnome extensions might not be installed by apt-get, and
 ### icons/
 
 The icons that could specify in gnome-tweaks which the installed path is `${HOME}/.local/share/icons`. Both icons and themes are Ant or Sweet.
-
-<img src="assets/gnome_tweaks_icons.png" style="zoom: 80%;" />
 
 -   Aqua-Dark
 
@@ -282,67 +297,93 @@ The icons that could specify in gnome-tweaks which the installed path is `${HOME
 
 ## Terminal
 
-
+The terminal configurations.
 
 ### install.sh
 
+Installs configurations of terminal.
 
+1.  Installs autojump, tmux and zsh;
+2.  Configures zsh and myrc;
+3.  Installs gogh with No.46 - Flat Remix terminal theme;
+4.  Installs GEF for GDB.
 
 ### tmux.conf.local
 
-
+My customization about tmux which splits terminal.
 
 ### zshrc
 
-
+My customization about zsh configurations.
 
 ### myrc
 
+My customized configuration of my command alias and environment path.
 
+### [autojump/](https://github.com/wting/autojump)
 
-### autojump/
+Submodule about autojump which can jump to frequently-used dir.
 
+### [bash-completion/](https://github.com/scop/bash-completion)
 
+Bash command auto completion.
 
-### bash-completion/
+### [Gogh/](https://github.com/Mayccoll/Gogh)
 
+Color scheme for your terminal.
 
+![](https://raw.githubusercontent.com/Mayccoll/Gogh/master/images/demos/themes.gif)
 
-### Gogh/
+### [ohmyzsh/](https://github.com/ohmyzsh/ohmyzsh)
 
+Customized zsh configuration.
 
-
-### ohmyzsh/
-
-
+![](https://cloud.githubusercontent.com/assets/2618447/6316862/70f58fb6-ba03-11e4-82c9-c083bf9a6574.png)
 
 ## Tools
 
-
+All runnable tools.
 
 ### colortest.perl
 
-
+Tests terminal color.
 
 ## Vim
 
-
+Configurations of VIM editor.
 
 ### install.sh
 
+VIM configurations installation.
 
+1.  Git clone [vimrc](https://github.com/amix/vimrc);
+2.  `ln` `vim` to `${HOME}/.vim` and `ln` `my_configs.vim` to vimrc location;
+3.  Generates ctags and cscopes.
 
 ### cscope.sh
 
-
+Generates `/usr/include` and `/usr/local/include` cscopes file to specified path.
 
 ### ctags.sh
 
-
+Generates `/usr/include` and `/usr/local/include` ctags file to specified path.
 
 ### my_configs.vim
 
-
+My configurations about VIM.
 
 ### vim/
 
+VIM plugins with configurations folder.
+
+# After Installation
+
+Some options need to be customizes by applications.
+
+## Terminal Configuration
+
+![](assets/terminal_preferences.png)
+
+## Tweaks Configuration
+
+<img src="assets/gnome_tweaks_icons.png" style="zoom: 80%;" />
