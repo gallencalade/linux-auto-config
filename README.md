@@ -378,7 +378,7 @@ VIM plugins with configurations folder.
 
 # After Installation
 
-Some options need to be customizes by applications.
+Some options need to be customized by applications.
 
 ## Terminal Configuration
 
