@@ -48,3 +48,5 @@ alias gentags="ctags -I __THROW -I __attribute_pure__ -I __nonnull -I __attribut
 # autojump
 [[ -s ${HOME}/.autojump/etc/profile.d/autojump.sh ]] && source ${HOME}/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
+
+POWERLEVEL9K_DISABLE_GITSTATUS=true

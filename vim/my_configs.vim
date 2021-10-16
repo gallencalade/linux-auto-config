@@ -198,3 +198,7 @@ autocmd FileType cc setlocal dict+=~/.vim/dict/cpp.dict
 
 :highlight extraSpace ctermbg=red guibg=red
 :match extraSpace /\v\s+$/
+
+
+let g:ale_cpp_cc_executable='g++-10'
+let g:ale_cpp_cc_options='-std=c++20 -Wall'
