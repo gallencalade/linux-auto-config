@@ -18,7 +18,7 @@ ln -sf tmux.conf.local ${HOME}/.tmux.conf.local
 echo "[2] Installing and Configuring ZSH"
 func_chk_rm ${HOME}/.oh-my-zsh
 pushd ohmyzsh
-RUNZSH=no ./tools/install.sh
+RUNZSH=./tools/install.sh
 popd
 
 ln -sfr zshrc ${HOME}/.zshrc
