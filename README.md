@@ -13,7 +13,7 @@ Configurations and installations is personalized by me, some options might be wr
 You can just start with:
 
 ```bash
-$ git clone --submodule git@github.com:gallencalade/linux-auto-config.git
+$ git clone --recursive git@github.com:gallencalade/linux-auto-config.git
 $ ./auto-install.sh
 ```
 
