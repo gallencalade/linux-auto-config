@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "[0] Configuring Git"
 git config --global user.name "Gallen Calade"
 git config --global user.email "gallencalade@gmail.com"
 git config --global core.editor vim

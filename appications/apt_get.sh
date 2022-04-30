@@ -1,24 +1,18 @@
 #!/bin/bash
 
-echo " - Coping sources.list to /etc/apt/"
-sudo cp sources.list /etc/apt/sources.list
-
-echo " - Adding Repository for Bashtop"
-sudo add-apt-repository -y ppa:bashtop-monitor/bashtop
-
-echo " - Adding Repository for Shutter"
-sudo add-apt-repository -y ppa:linuxuprising/shutter
-
-echo " - Adding Repository for Typora"
-wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-sudo add-apt-repository 'deb https://typora.io/linux ./'
-
-sudo apt-get update && apt-get dist-upgrade
+source "$(dirname $0)/../tools/funcs.sh"
 
 func_apt_get_install() {
-   echo " - Installing about ${1}"
-   sudo apt-get -y install ${1}
+	for e in $*
+	do
+		func_echo_info " - Installing ${e}"
+		apt-get install -y ${e}
+		shift
+	done
 }
+
+
+apt-get update && apt-get dist-upgrade
 
 GCC="linux-headers-generic build-essential nasm gcc g++ gdb gfortran"
 func_apt_get_install ${GCC}
@@ -53,6 +47,7 @@ func_apt_get_install ${COMPRESS}
 CMDS="neofetch tree htop bashtop net-tools ifstat dos2unix locate sysstat tcpdump iotop"
 func_apt_get_install ${CMDS}
 
-SWS="calibre okular shutter focuswriter bless wireshark vlc speedcrunch zeal"
+SWS="calibre okular shutter focuswriter bless wireshark vlc speedcrunch zeal
+typora remmina gnome-tweaks"
 func_apt_get_install ${SWS}
 

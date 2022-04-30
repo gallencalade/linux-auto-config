@@ -1,12 +1,6 @@
-[submodule "terminal/autojump"]
-	path = terminal/autojump
-	url = https://github.com/wting/autojump.git
 [submodule "terminal/ohmyzsh"]
 	path = terminal/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
 [submodule "terminal/Gogh"]
 	path = terminal/Gogh
 	url = https://github.com/Mayccoll/Gogh.git
-[submodule "terminal/bash-completion"]
-	path = terminal/bash-completion
-	url = https://github.com/scop/bash-completion.git

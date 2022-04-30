@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source "../funcs.sh"
+source "$(dirname $0)/../tools/funcs.sh"
+
 
 cmd_ctags() {
     ctags -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__    \
@@ -13,13 +14,13 @@ cmd_ctags() {
 
 gen_ctags() {
   echo " - CTags for ${1} to ${2}"
-  func_chk_rm ${2}
+  func_rm ${2}
   cmd_ctags ${2} ${1}
   ls -hl ${2}
 }
 
 TAGS_ROOT_PATH="${HOME}/.vim/tags"
-func_chk_mkdir ${TAGS_ROOT_PATH}
+func_mkdir ${TAGS_ROOT_PATH}
 
 gen_ctags "/usr/include" "${TAGS_ROOT_PATH}/usr_include.tags"
 gen_ctags "/usr/local/include" "${TAGS_ROOT_PATH}/usr_local_include.tags"

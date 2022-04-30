@@ -1,19 +1,14 @@
 #!/bin/bash
 
-echo "[0] Installing Apt-get Applications"
+func_echo_info "[0] Apt-get installs applications"
 ./apt_get.sh
 
-echo "[1] Installing Gnome Shell Extensions"
-./gnome_shell_extensions.sh
+func_echo_info "[1] Snap installs applications"
+./snap.sh
 
-echo "[2] Installing Docker"
+func_echo_info "[2] Pip3 Installs applications"
+./pip3.sh
+
+func_echo_info "[3] Installing docker"
 ./docker.sh
 
-echo "[3] Pip Installing"
-./pip.sh
-
-echo "[4] Installing Themes"
-./themes.sh
-
-echo "[5] Installing Offline dpkgs"
-./dpkgs.sh

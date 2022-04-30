@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source "../funcs.sh"
+source "$(dirname $0)/../tools/funcs.sh"
+
 
 cmd_cscope() {
   find ${1} -not -type l      \
@@ -16,13 +17,13 @@ cmd_cscope() {
 
 gen_cscope() {
   echo " - CScoping for ${1} to ${2}"
-  func_chk_rm ${2}
+  func_rm ${2}
   cmd_cscope ${1} ${2}
   ls -hl ${2}
 }
 
 SCOPES_ROOT_PATH="${HOME}/.vim/scopes"
-func_chk_mkdir ${SCOPES_ROOT_PATH}
+func_mkdir ${SCOPES_ROOT_PATH}
 
 gen_cscope "/usr/include" "${SCOPES_ROOT_PATH}/usr_include.scope"
 

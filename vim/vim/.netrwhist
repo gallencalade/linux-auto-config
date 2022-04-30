@@ -1,0 +1,3 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/media/gallen/Gallen Calade/Documents/projects/my/linux-auto-config/vim/vim'

@@ -20,15 +20,6 @@ func_entry_install() {
 	pushd ${1} && ./install.sh && popd
 }
 
-func_apt_get_install() {
-	for e in $*
-	do
-		func_echo_info " - Installing ${e}"
-		apt-get install -y ${e}
-		shift
-	done
-}
-
 func_chk() {
     if [ -e ${1} ]
     then

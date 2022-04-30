@@ -1,0 +1,50 @@
+CUDA_HOME=/usr/local/cuda
+FLUTTER_HOME=${HOME}/Documents/projects/open-sources/flutter
+ANDROID_HOME=${HOME}/Documents/projects/open-sources/Android/Sdk
+ANDROID_SDK_ROOT=${ANDROID_HOME}
+
+export PATH=${PATH}:${CUDA_HOME}/bin:${FLUTTER_HOME}/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+export C_INCLUDE_PATH=${C_INCLUDE_PATH}:${CUDA_HOME}/include
+export CPLUS_INCLUDE_PATH=${CPLUS_INCLUDE_PATH}:${CUDA_HOME}/include
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CUDA_HOME}/lib64
+export LIBRARY_PATH=${LIBRARY_PATH}:${CUDA_HOME}/lib64
+
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+export NO_PROXY=localhost,127.0.0.1,LOCALHOST
+export JAVA_HOME=/usr/lib/jvm/java-14-openjdk-amd64
+export C_INCLUDE_PATH=${C_INCLUDE_PATH}:${JAVA_HOME}/include:${JAVA_HOME}/include/linux
+export CPLUS_INCLUDE_PATH=${CPLUS_INCLUDE_PATH}:${JAVA_HOME}/include:${JAVA_HOME}/include/linux
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${JAVA_HOME}/lib
+export LIBRARY_PATH=${LIBRARY_PATH}:${JAVA_HOME}/lib
+
+# This is for man to colorize output
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+# lsd
+command -v lsd > /dev/null && alias ls='lsd --group-dirs first'
+command -v lsd > /dev/null && alias tree='lsd --group-dirs first --tree'
+
+# bashtop
+command -v bashtop > /dev/null && alias top='bashtop'
+
+# bat
+alias bat='bat --theme=ansi-dark'
+command -v bat > /dev/null && alias cat='bat --pager=never'
+command -v bat > /dev/null && alias less='bat'
+
+# trash-cli
+alias rm="trash-put"
+
+# ctags
+alias gentags="ctags -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__ --file-scope=yes --languages=c,c++ --links=yes --c-kinds=+c+e+f+g+m+n+s+t+u+v+p+x --c++-kinds=+c+e+f+g+m+n+s+t+u+v+p+x --fields=+iaSl --extra=+q -R . tags"
+
+# autojump
+[[ -s ${HOME}/.autojump/etc/profile.d/autojump.sh ]] && source ${HOME}/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
