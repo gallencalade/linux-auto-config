@@ -21,15 +21,11 @@ RUNZSH=${PWD}/tools/install.sh
 popd
 
 
-git clone -b v1.15.0 --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-
-echo "[3] Installing autojump"
-pushd autojump
-python3 install.py
-popd
 
 
 ${RUNZSH}

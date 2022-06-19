@@ -7,14 +7,6 @@ func_echo_info "[0] Configuring git"
 ./git.sh
 
 
-func_echo_info "[1] Configuring tmux"
-ln -sfr tmux.conf.local ${HOME}/.tmux.conf.local
-
-
-func_echo_info "[2] Configuring zsh"
-ln -sfr zshrc ${HOME}/.zshrc
-
-
 func_echo_info "[3] Configuring myrc"
 ln -sfr myrc ${HOME}/.myrc
 
