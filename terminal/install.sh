@@ -5,7 +5,6 @@ source "$(dirname $0)/../tools/funcs.sh"
 func_echo_info "[0] Installing tmux"
 func_rm ${HOME}/.tmux
 git clone https://github.com/gpakosz/.tmux.git ${HOME}/.tmux
-ln -sf ${HOME}/.tmux/.tmux.conf ${HOME}/.tmux.conf
 
 
 func_echo_info "[1] Installing terminal theme - Gogh"
