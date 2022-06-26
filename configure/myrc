@@ -46,5 +46,5 @@ alias rm="trash-put"
 alias gentags="ctags -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__ --file-scope=yes --languages=c,c++ --links=yes --c-kinds=+c+e+f+g+m+n+s+t+u+v+p+x --c++-kinds=+c+e+f+g+m+n+s+t+u+v+p+x --fields=+iaSl --extra=+q -R . tags"
 
 # autojump
-[[ -s ${HOME}/.autojump/etc/profile.d/autojump.sh ]] && source ${HOME}/.autojump/etc/profile.d/autojump.sh
+[[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
 autoload -U compinit && compinit -u
