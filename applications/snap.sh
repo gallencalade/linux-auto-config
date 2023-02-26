@@ -6,7 +6,7 @@ func_snap_install() {
 	for e in $*
 	do
 		func_echo_info " - Installing ${e}"
-		snap install ${e}
+		sudo snap install ${e}
 		shift
 	done
 }

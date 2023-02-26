@@ -26,5 +26,4 @@ SCOPES_ROOT_PATH="${HOME}/.vim/scopes"
 func_mkdir ${SCOPES_ROOT_PATH}
 
 gen_cscope "/usr/include" "${SCOPES_ROOT_PATH}/usr_include.scope"
-
 gen_cscope "/usr/local/include" "${SCOPES_ROOT_PATH}/usr_local_include.scope"

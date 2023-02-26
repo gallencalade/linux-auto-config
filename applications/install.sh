@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source "$(dirname $0)/../tools/funcs.sh"
+
 func_echo_info "[0] Apt-get installs applications"
 ./apt_get.sh
 

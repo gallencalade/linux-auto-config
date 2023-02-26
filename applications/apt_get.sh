@@ -6,13 +6,13 @@ func_apt_get_install() {
 	for e in $*
 	do
 		func_echo_info " - Installing ${e}"
-		apt-get install -y ${e}
+		sudo apt-get install -y ${e}
 		shift
 	done
 }
 
 
-apt-get update && apt-get dist-upgrade
+sudo apt-get update && sudo apt-get dist-upgrade -y
 
 GCC="linux-headers-generic build-essential nasm gcc g++ gdb gfortran"
 func_apt_get_install ${GCC}

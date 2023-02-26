@@ -6,7 +6,7 @@ func_pip3_install() {
 	for e in $*
 	do
 		func_echo_info " - Installing ${e}"
-		pip3 install ${e}
+		sudo pip3 install ${e}
 		shift
 	done
 }
