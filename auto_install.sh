@@ -12,8 +12,8 @@ source "$(dirname $0)/tools/funcs.sh"
 # func_echo_info "[==== Configuring vim ====]"
 # func_entry_install vim
 
-# func_echo_info "[==== Configuring terminal ====]"
-# func_entry_install terminal
+func_echo_info "[==== Configuring terminal ====]"
+func_entry_install terminal
 
-func_echo_info "[==== Configuring customization ====]"
-func_entry_install configure
+# func_echo_info "[==== Configuring customization ====]"
+# func_entry_install configure

@@ -12,5 +12,4 @@ func_snap_install() {
 }
 
 
-func_snap_install	lsd \
-			superpaper
+func_snap_install	superpaper

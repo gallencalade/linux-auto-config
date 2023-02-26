@@ -1,22 +1,4 @@
-CUDA_HOME=/usr/local/cuda
-FLUTTER_HOME=${HOME}/Documents/projects/open-sources/flutter
-ANDROID_HOME=${HOME}/Documents/projects/open-sources/Android/Sdk
-ANDROID_SDK_ROOT=${ANDROID_HOME}
-
-export PATH=${PATH}:${CUDA_HOME}/bin:${FLUTTER_HOME}/bin:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
-export C_INCLUDE_PATH=${C_INCLUDE_PATH}:${CUDA_HOME}/include
-export CPLUS_INCLUDE_PATH=${CPLUS_INCLUDE_PATH}:${CUDA_HOME}/include
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CUDA_HOME}/lib64
-export LIBRARY_PATH=${LIBRARY_PATH}:${CUDA_HOME}/lib64
-
-export PUB_HOSTED_URL=https://pub.flutter-io.cn
-export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 export NO_PROXY=localhost,127.0.0.1,LOCALHOST
-export JAVA_HOME=/usr/lib/jvm/java-14-openjdk-amd64
-export C_INCLUDE_PATH=${C_INCLUDE_PATH}:${JAVA_HOME}/include:${JAVA_HOME}/include/linux
-export CPLUS_INCLUDE_PATH=${CPLUS_INCLUDE_PATH}:${JAVA_HOME}/include:${JAVA_HOME}/include/linux
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${JAVA_HOME}/lib
-export LIBRARY_PATH=${LIBRARY_PATH}:${JAVA_HOME}/lib
 
 # This is for man to colorize output
 export LESS_TERMCAP_mb=$'\e[1;32m'
